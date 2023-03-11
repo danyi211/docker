@@ -136,9 +136,9 @@ RUN mkdir src && \
 ###############################################################################
 # CERN's ROOT
 ###############################################################################
-LABEL root.version="6.22.08"
+LABEL root.version="6.28.00"
 RUN mkdir src &&\
-    ${__wget} https://root.cern/download/root_v6.22.08.source.tar.gz |\
+    ${__wget} https://root.cern/download/root_v6.28.00.source.tar.gz |\
      ${__untar} &&\
     cmake \
       -DCMAKE_BUILD_TYPE=Release \
@@ -153,7 +153,8 @@ RUN mkdir src &&\
       -Dxrootd=OFF \
       -Dgsl_shared=ON \ 
       -Dmathmore=ON \   
-      -Dpythia6=ON \    
+      -Dpythia6=ON \
+      -Dimt=ON    
       -DPYTHIA6_LIBRARY=${__prefix}/pythia6/libPythia6.so \
       -B build \
       -S src \
