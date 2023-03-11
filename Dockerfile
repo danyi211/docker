@@ -154,7 +154,7 @@ RUN mkdir src &&\
       -Dgsl_shared=ON \ 
       -Dmathmore=ON \   
       -Dpythia6=ON \
-      -Dimt=ON    
+      -Dimt=ON  \  
       -DPYTHIA6_LIBRARY=${__prefix}/pythia6/libPythia6.so \
       -B build \
       -S src \
